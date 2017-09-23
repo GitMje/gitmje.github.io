@@ -5,7 +5,7 @@ description: ""
 baseurl: ""
 url: "http://erpenbeck.io"
 title_description: "SOLID Engineering...continuously delivered."
-title_image: "https://www.gravatar.com/avatar/bce41b3dd3507d3ee37f1b2f6f28d2eb?s=500&d=mm"
+title_image: "image.jpg"
 google_analytics: "UA-20365477-4"
 disqus_account: 
 github_repository: https://github.com/gitmje
@@ -24,8 +24,8 @@ xing_link:
 facebook_link:
 
 # Footer
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+footer_left: ""
+footer_right: ""
 
 # Build settings
 markdown: kramdown
