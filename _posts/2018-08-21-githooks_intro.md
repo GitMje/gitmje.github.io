@@ -22,7 +22,7 @@ This may be obvious, but the client-side hooks are designed to control actions t
 These are stored in the repo's `/.git/hooks` directory.  There are sample hooks in the hooks directory that are not active with the post-fix of `.sample`.  If you remove the post-fix and do a `chmod +x <filename>` on the hook, it will become active.
 
 Here is an example of the `/.git/hooks/` directory:
-![githook_intro_example1](images/githook_intro_example1.png)
+![githook_intro_example1]({{ "/assets/githook_intro_example1.png" | absolute_url }})
 
 Things that you may want to control with client-side hooks are:
 
