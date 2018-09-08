@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Azure Event Grid
-date:       2018-08-20 12:00:00
+date:       2018-09-07 20:08:00
 author:     Michael Erpenbeck
 summary:    Azure Event Grid
 categories: DevOps Azure
