@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Git hooks introduction
-date:       2018-08-20 12:00:00
+date:       2018-08-21 07:00:00
 author:     Michael Erpenbeck
 summary:    Git hooks intro
 categories: hooks
