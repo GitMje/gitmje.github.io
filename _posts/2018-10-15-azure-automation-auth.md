@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      Azure Automation Authentication basics
+title:      Azure Automation authentication basics
 date:       2018-10-15 20:00:00
 author:     Michael Erpenbeck
-summary:    Azure Automation Authentication basics
+summary:    Azure Automation authentication basics
 categories: Azure,Automation
 thumbnail:  jekyll
 tags:
@@ -12,7 +12,7 @@ tags:
  - automation
 ---
 
-There's three ways to control permissions within Azure Automation.  I learned about this from the [Microsoft Azure Essentials Azure Automation](https://www.amazon.com/dp/B00WL2734G/ref=cm_sw_em_r_mt_dp_U_3neGCb14CRJ6G) book.  It is a free Kindle book from Microsoft Press and is a easy read.
+There's three ways to control permissions within Azure Automation.  I learned about this from the [Microsoft Azure Essentials Azure Automation](https://www.amazon.com/dp/B00WL2734G/ref=cm_sw_em_r_mt_dp_U_3neGCb14CRJ6G) book.  It is a free Kindle book from Microsoft Press and is an easy read.
 
 1. Certificates;
 2. Set the "Create Run As Account" to yes when creating the Azure Automation resource; or
