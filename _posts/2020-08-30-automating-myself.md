@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Automating myself
+title:      Automating Myself
 date:       2020-08-30 10:00:00
 author:     Michael Erpenbeck
 summary:    Automating myself through Zoombot
