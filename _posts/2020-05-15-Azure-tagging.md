@@ -10,6 +10,6 @@ tags:
  - Azure
 ---
 
-Just a quick note ... Here is a nice article on Azure Tagging and Policy enforcement for cost control and maintenance windows.  If you don't control your own costs in Azure, someone else in the company will when there's an mistake.
+Just a quick note ... Here is a nice article on Azure Tagging and Policy enforcement for cost control and maintenance windows.  If you don't control your department's costs in Azure, someone else in the company will...after a costly mistake occurs.  Do it through automation, so that external teams do not put time-consuming and labor intensive manual controls in place.
 
-[Azure Policy](https://cloudskills.io/blog/azure-policy-tagging?__s=uqywoptvtgjkvewfgurh)
+See [Managing Resource Tagging with Azure Policy](https://cloudskills.io/blog/azure-policy-tagging?__s=uqywoptvtgjkvewfgurh)
