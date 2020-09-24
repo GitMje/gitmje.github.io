@@ -32,7 +32,7 @@ It will reply to statements like:
 
 <p>&nbsp;</p>
 
-I've heavily modified my version and will soon share my fork back to [Zoombot](https://github.com/mcreed/zoombot).  The JavaScript is really rough, and I plan to refactor the whole thing in React.
+I've heavily modified my version and will soon PR my commits back to [Zoombot](https://github.com/mcreed/zoombot).  The JavaScript is really rough, and I plan to refactor the whole thing in React.
 
 <p>&nbsp;</p>
 
