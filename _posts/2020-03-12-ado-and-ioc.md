@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      IoC and ADO.Net
-date:       2019-03-08 10:00:00
+date:       2020-03-12 10:00:00
 author:     Michael Erpenbeck
 summary:    IoC and ADO.Net
 categories: C#
