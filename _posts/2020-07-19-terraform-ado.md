@@ -10,7 +10,7 @@ tags:
  - Azure
 ---
 
-There is a new ADO Terraform provider that is very handy.  
+There is a [new ADO Terraform provider](https://adinermie.com/deploying-azure-devops-ado-using-terraform/) that is very handy.  
 
-See
-[Deploying Azure DevOps (ADO) using Terraform](https://adinermie.com/deploying-azure-devops-ado-using-terraform/)
+One of the less obvious tricks for building Terraform pipelines is the question "how does the `terraform plan` command fits into the whole pipeline?!?".  If done correct, it creates a nice mechanism for seperation of concerns.  Create a distinct "Plan Step" and giving the permissions to Operations teams (SRE/Support) be able to inspect the plan before the `terraform apply` command occurs, is super powerful.  See
+[Terraform plan in section 8.3.4.](https://medium.com/@gmusumeci/deploying-terraform-infrastructure-using-azure-devops-pipelines-step-by-step-d58b68fc666d) for how to do this.
