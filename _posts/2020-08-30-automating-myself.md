@@ -10,7 +10,7 @@ tags:
  - Tools
 ---
 
-I believe in automate-all-of-the things, so I decided to automate myself.  I recently decided to buid a zoombot to use on my next work virtual happy hour via Zoom.  
+I believe in automating-all-of-the things, and so I decided to automate myself.  I recently decided to buid a Zoombot to use on my next work virtual happy hour via Zoom.  
 
 <p>&nbsp;</p>
 
