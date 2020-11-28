@@ -26,10 +26,10 @@ Azure DevOps allows you to push data to Log Analytics (Azure Monitor Log) in ord
 2. Follow the steps to [Set up an Azure Monitor Log stream](https://docs.microsoft.com/en-us/azure/devops/organizations/audit/auditing-streaming?view=azure-devops#set-up-an-azure-monitor-log-stream){:target="_blank"}
 
 3. Once you've completed these instructions, you will see a new log called `AzureDevOpsAuditing` in the `LogManagement` solution.  See [this reference](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/AzureDevOpsAuditing){:target="_blank"} for the column definitions.  It may take a couple of minutes to see `AzureDevOpsAuditing` as it won't appear until events occur in Azure DevOps.
-![ado-audit-1 image]({{ "/assets/2020-11-25-ado-auditing/ado-audit-1.png" | absolute_url }})
+![ado-audit-1]({{ "/assets/2020-11-25-ado-auditing/ado-audit-1.png" | absolute_url }})
 
 4. Click the eye icon that appears next to the `AzureDevOpsAuditing` and it will generate a query that will show you the raw data.
-![ado-audit-2 image]({{ "/assets/2020-11-25-ado-auditing/ado-audit-2.png" | absolute_url }})
+![ado-audit-2]({{ "/assets/2020-11-25-ado-auditing/ado-audit-2.png" | absolute_url }})
 
 5. The raw data will look something like this.
 ![ado-audit-3 image]({{ "/assets/2020-11-25-ado-auditing/ado-audit-3.png" | absolute_url }})
