@@ -66,4 +66,4 @@ If we do a query to see all of the Areas we can see the following result.  Note 
 
 ![ado-audit-7](/assets/2020-11-25-ado-auditing/ado-audit-7.png)
 
-Here is the [full list of possible Areas](https://docs.microsoft.com/en-us/azure/devops/organizations/audit/azure-devops-auditing?view=azure-devops&tabs=preview-page#areas){:target="_blank"}.  An especially useful area is the `Pipelines` and `Release` areas.  In future blog posts, I will document my current use of these areas.
+Here is the [full list of possible Areas](https://docs.microsoft.com/en-us/azure/devops/organizations/audit/azure-devops-auditing?view=azure-devops&tabs=preview-page#areas){:target="_blank"}.  An especially useful area is the `Pipelines` and `Release` areas.  In a [future blog post](https://code.erpenbeck.io/devops,azure/2020/11/28/ado-release-auditing/){:target="_blank"}, I will document my current use of these areas.

@@ -17,7 +17,7 @@ In this post, I am going to expand on how the `Pipelines` and `Release` Areas ca
 
 ## Monitor Release Creation ##
 
-To create a query that will display any release created, including the person that created it, use the following query.
+To create a query that will display any release created, including the person that created it, use the following KQL query.  Note, that I'm only projecting a few columns, there's a lot more data that you can see if your remove the `project` line to view the raw data, my examples are giving the bare minimum information to show how easy that this information is to use.
 ```
     AzureDevOpsAuditing 
     | where OperationName == 'Release.ReleaseCreated'
