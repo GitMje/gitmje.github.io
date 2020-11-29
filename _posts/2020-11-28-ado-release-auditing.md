@@ -72,7 +72,7 @@ Below is the results of the query:
 
 ## Monitor Approvals ##
 
-This is a very important question to answer for audits, "Who approves you releases?" and "Are your pre/post release gates working?".  To answer that, you can use the following query (note, I'm also adjusting to central time for simplicity).  I also limit it to only the stage `Prod` (auditors don't care about non-Production as much).  You can modify this to your own stage names or take the `where` condition out and search all stages:
+This is a very important question to answer for audits, "Who approves you releases?" and "Are your pre/post release gates working?".  To answer that, you can use the following query (note, I'm also adjusting to US Central Time for simplicity).  I also limit it to only the stage `Prod` (auditors don't care about non-Production as much).  You can modify this to your own stage names or take the `where` condition out and search all stages:
 
 ```
     AzureDevOpsAuditing 
