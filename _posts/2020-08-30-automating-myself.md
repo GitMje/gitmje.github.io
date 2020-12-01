@@ -16,7 +16,7 @@ I believe in automating-all-of-the things, and so I decided to automate myself. 
 
 To try it out yourself:
 
-1. Open [Michael's Zoombot](https://zoomblob.z19.web.core.windows.net/) in a Chrome Browser.
+1. Open [Michael's Zoombot](https://zoomblob.z19.web.core.windows.net/){:target="_blank"} in a Chrome Browser.
 2. Press the Turn On Zoombot button in the left corner.
 3. Talk to it like you would to me via a headset.
 
