@@ -146,6 +146,6 @@ At this point, you may be saying, ‘OK, got it, always use `throw;`!’. Like m
         }
 ```
 
-Note, there’s some debate on the usefulness of the ApplicationException class and whether Custom Exceptions should be derived from the ApplicationException class or just the Exception class…See [ApplicationException](https://blogs.msdn.microsoft.com/brada/2004/03/25/introducing-the-net-framework-standard-library-annotated-reference-vol1/) details for more information.
+Note, there’s some debate on the usefulness of the ApplicationException class and whether Custom Exceptions should be derived from the ApplicationException class or just the Exception class…See [ApplicationException](https://blogs.msdn.microsoft.com/brada/2004/03/25/introducing-the-net-framework-standard-library-annotated-reference-vol1/){:target="_blank"} details for more information.
 
 So next time that you see a `throw ex;` statement in a catch block, make sure that you ask yourself…”Is the intent of this code to do a rethrow and keep the full stack trace, or to capture more information with a Custom Exception”?
