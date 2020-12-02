@@ -18,6 +18,6 @@ KQL is a language used by Microsoft Azure in Log Analytics and also in Applicati
 
 Here are some materials that I've found to make the learning curve much quicker:
 
-- [Kusto to SQL translation table](https://docs.microsoft.com/en-us/azure/kusto/query/sqlcheatsheet)
-- [Pluralsight-Kusto Query Language (KQL) from Scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch)
-- [Use Microsoft's example data set online to practice](https://portal.loganalytics.io/demo#/discover/query/main)
+- [Kusto to SQL translation table](https://docs.microsoft.com/en-us/azure/kusto/query/sqlcheatsheet){:target="_blank"}
+- [Pluralsight-Kusto Query Language (KQL) from Scratch](https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch){:target="_blank"}
+- [Use Microsoft's example data set online to practice](https://portal.loganalytics.io/demo#/discover/query/main){:target="_blank"}

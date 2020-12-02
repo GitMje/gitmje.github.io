@@ -32,11 +32,11 @@ It will reply to statements like:
 
 <p>&nbsp;</p>
 
-I've heavily modified my version and will soon PR my commits back to [Zoombot](https://github.com/mcreed/zoombot).  The JavaScript is really rough, and I plan to refactor the whole thing in React.
+I've heavily modified my version and will soon PR my commits back to [Zoombot](https://github.com/mcreed/zoombot){:target="_blank"}.  The JavaScript is really rough, and I plan to refactor the whole thing in React.
 
 <p>&nbsp;</p>
 
-Ping me on [Twitter](https://twitter.com/erpenbeck) and let me know if you think that the Zoombot is:
+Ping me on [Twitter](https://twitter.com/erpenbeck){:target="_blank"} and let me know if you think that the Zoombot is:
 1. Super creepy, delete it now!
 2. Mostly creepy, but also a little funny.
 3. Really funny. 
