@@ -13,7 +13,7 @@ tags:
 
 ## Overview ##
 
-My team has had been getting countless questions for SOC2, HiTrust, and SOX audits asking for data from various systems that need to be combined and reported on with short deadlines, especially from our Azure DevOps Services instance.
+My team has had been getting countless questions for SOC2, HiTrust, and SOX audits asking for data from various systems that need to be combined and reported on with short deadlines, especially regarding how our Azure DevOps Services instance is configured.
 
 I found myself wanting to answer simple questions like, "Who has been added/removed from our Azure DevOps Services instance and who made these changes?".  In this quick post, I will show you how Azure DevOps Audit streams can help solve these questions.
 
