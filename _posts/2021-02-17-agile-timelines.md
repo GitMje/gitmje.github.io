@@ -24,7 +24,7 @@ Below is an example of how to build sprint cycles into business quarters.  It cr
 |Q3|7/1|7/21|7/22|8/11|8/12|9/1|9/2|9/22|9/23|9/29|90|
 |Q4|9/30|10/20|10/21|11/10|11/11|12/1|12/2|12/22|12/23|12/29|90|
 
-Agile Sprint cycles work the best when the team size and sprint duration stay as constant as possible over time.  This allows for velocity calculations and predictions of work to be accomplished.
+<br>Agile Sprint cycles work the best when the team size and sprint duration stay as constant as possible over time.  This allows for velocity calculations and predictions of work to be accomplished.
 
 I have devised a simple technique, as shown below, to allow teams to work in a quarterly cadence.
 
@@ -45,6 +45,8 @@ Below are a couple of different configurations of the same concept, but using di
 |Q2|3/29|4/18|4/19|5/9|5/10|5/30|5/31|6/20|6/21|6/27|90|
 |Q3|6/28|7/18|7/19|8/8|8/9|8/29|8/30|9/19|9/20|9/26|90|
 |Q4|9/27|10/17|10/18|11/7|11/8|11/28|11/29|12/19|12/20|12/26|90|
+
+<br><br>
 
 ## 2021 Two Week Sprint Cycle - Sprint 7 = 1 week (Sprints start on Mondays)
 
