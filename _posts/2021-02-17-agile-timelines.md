@@ -12,7 +12,17 @@ tags:
 
 Most companies that I have worked at require the Agile Sprint teams to develop a roadmap for the project.  Management typically want to know what the "Big Rocks" are that I will be working on this business quarter vs next business quarter.
 
-Below are some examples of how to build sprint cycles into business quarters.  It creates a convenient method to build roadmaps for work.
+Below is an example of how to build sprint cycles into business quarters.  It creates a convenient method to build roadmaps for work.
+
+## 2021 Three Week Sprint Cycle - Sprint 5 = 1 week (Sprints start on Thursdays)
+
+|Sprints|1||2||3||4||5|||
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|Quarters|Start|End|Start|End|Start|End|Start|End|Start|End|Days|
+|Q1|12/31|1/20|1/21|2/10|2/11|3/3|3/4|3/24|3/25|3/31|90|
+|Q2|4/1|4/21|4/22|5/12|5/13|6/2|6/3|6/23|6/24|6/30|90|
+|Q3|7/1|7/21|7/22|8/11|8/12|9/1|9/2|9/22|9/23|9/29|90|
+|Q4|9/30|10/20|10/21|11/10|11/11|12/1|12/2|12/22|12/23|12/29|90|
 
 Agile Sprint cycles work the best when the team size and sprint duration stay as constant as possible over time.  This allows for velocity calculations and predictions of work to be accomplished.
 
@@ -24,15 +34,7 @@ I use the one week sprint (sprint 5/7) to do quarterly roadmap planning with my 
 
 Note that 4 quarters at 90 days each = 360 days (not a perfect year time-frame).  You can make up for the extra 5 days over the holidays (which is rarely productive time anyhow), which is typical in the United States.
 
-## 2021 Three Week Sprint Cycle - Sprint 5 = 1 week (Sprints start on Thursdays)
-
-|Sprints|1||2||3||4||5|||
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Quarters|Start|End|Start|End|Start|End|Start|End|Start|End|Days|
-|Q1|12/31|1/20|1/21|2/10|2/11|3/3|3/4|3/24|3/25|3/31|90|
-|Q2|4/1|4/21|4/22|5/12|5/13|6/2|6/3|6/23|6/24|6/30|90|
-|Q3|7/1|7/21|7/22|8/11|8/12|9/1|9/2|9/22|9/23|9/29|90|
-|Q4|9/30|10/20|10/21|11/10|11/11|12/1|12/2|12/22|12/23|12/29|90|
+Below are a couple of different configurations of the same concept, but using different starting days and durations.
 
 ## 2021 Three Week Sprint Cycle - Sprint 5 = 1 week (Sprints start on Mondays)
 
