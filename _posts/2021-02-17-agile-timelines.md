@@ -10,7 +10,7 @@ tags:
  - agile
 ---
 
-Most companies that I have worked at require the Agile Sprint teams to develop a roadmap for the project.  Management typically want to know what the "Big Rocks" are that I will be working on this business quarter vs next business quarter.
+Most companies that I have worked at require the Agile Sprint teams to develop a roadmap for the project.  Management typically wants to know what the "Big Rocks" are that I my team will be working on this business quarter and at least the next business quarter.
 
 Below is an example of how to build sprint cycles into business quarters.  It creates a convenient method to build roadmaps for work.
 
