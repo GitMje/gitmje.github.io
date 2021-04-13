@@ -30,7 +30,7 @@ I have devised a simple technique, as shown below, to allow teams to work in a q
 
 For two week sprints, it means that teams can achieve six consistent and continuous sprints of a two week duration followed by one week in sprint 7.  For three weeks, four three week sprints followed by one week in sprint 5.
 
-I use the one week sprint (sprint 5/7) to do quarterly roadmap planning with my Business Analysts/Scrum Masters.  The development and quality assurance teams can use the time for cleaning up technical dept and catching up.  Obviously, you could reverse this and have sprint 1 be the one week planning sprint, it's really whatever works for the team.
+I use the one week sprint (sprint 5/7) to do quarterly roadmap planning with my Business Analysts/Scrum Masters.  The development and quality assurance teams can use the time for cleaning up technical debt and catching up.  Obviously, you could reverse this and have sprint 1 be the one week planning sprint, it's really whatever works for the team.
 
 Note that 4 quarters at 90 days each = 360 days (not a perfect year time-frame).  You can make up for the extra 5 days over the holidays (which is rarely productive time anyhow), which is typical in the United States.
 
