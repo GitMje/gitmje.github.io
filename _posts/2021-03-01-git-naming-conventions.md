@@ -45,11 +45,13 @@ Most git client tools like [GitKraken](https://www.gitkraken.com/){:target="_bla
 | Support | `support/(id)-(short-description)` | `support/876-app-support-reboot-fix`|
 | Bugfix (alternative) | `bugfix/(id)-(short-description)` | `bugfix/689-pen-test-finding` |
 
+While I use [kebab-case](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841){:target="_blank"}, meaning it is all lower case with zero or more dash separators, in this convention, feel free to use whatever style that you prefer, such as PascalCase camelCase, etc.  The convention for the wording between the slashes should be determined by the team's preferences.
+
 ### Definition of terms in the above table
 
 - `(id)` is a work item id for a bug, user story, task, etc. For example `123`.
 - `(user-id)` is a user name such as `merpenbeck`.
-- `(short-description)` is a phrase in [kebab-case](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841){:target="_blank"}, meaning it is all lower case with zero or more dash separators, such as `recursive-loop-fix`.
+- `(short-description)` is a phrase, such as `recursive-loop-fix`.
 - `(release-id)` is a release identifier such as a semantic version number or date based.
 
 ### Branch prefix support within git workflow tools
@@ -73,8 +75,8 @@ And filtering by branch prefix is also enabled based on the gitflow workflow.
 
 ### Some places where teams have issues
 
-1. Not everyone likes the term `topic` as a generalized way of referring to a bug or a feature, but it does make things a bit simplier.  Decide as a team how you want to approach `topic` branches.
+1. Not everyone likes the term `topic` as a generalized way of referring to a bug or a feature, but it does make things a bit simpler.  Decide as a team how you want to approach `topic` branches.
 2. Often team members accidently use `users` rather than `user`, which results in duplicate folders in these tools.  I typically advise to use the singular case as `feature`, `bug`, etc are all singular case as well.
-3. Case matters, so `Feature` and `feature` will similarily result in duplicate folders.  This comes down to being disciplined on naming and using scripting for building branches where you can.
+3. Case matters, so `Feature` and `feature` will similarly result in duplicate folders.  This comes down to being disciplined on naming and using scripting for building branches where you can.
 
 I hope that this will help in organizing your git repos.
