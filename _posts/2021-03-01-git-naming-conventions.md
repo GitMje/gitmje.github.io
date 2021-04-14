@@ -34,7 +34,7 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 
 ### Table of branch types
 
-|Branch Type|convention|Example|
+|Type|Pattern|Example|
 |:-:|--|--|
 | Hotfix | `hotfix/(id)-(short-description)` | `hotfix/234-yikes-fix-it` |
 | Feature | `feature/(id)-(short-description)` | `feature/647-update-radio-button` |
