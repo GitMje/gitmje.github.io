@@ -10,7 +10,7 @@ tags:
  - git
 ---
 
-## A suggested naming convention for branches
+## A opinionated naming convention for branches
 
 The forward slash is a little known trick in git naming conventions.  Instead of using a dash or underscore, the forward slash gets interpreted as a directory structure.  This is very nice for grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
 
@@ -18,7 +18,7 @@ The forward slash is a little known trick in git naming conventions.  Instead of
 
 ![typical-repo](/assets/2021-03-01-git-naming-conventions/typical-repo.png)
 
-### An example of a git repo with a better organized naming convention
+### An better organized naming convention
 
 ![better-repo](/assets/2021-03-01-git-naming-conventions/better-repo.png)
 
