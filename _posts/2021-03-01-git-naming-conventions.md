@@ -42,6 +42,7 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 | Topic | `topic/(id)-(short-description)` | `topic/456-query-optimization` |
 | User | `user/(user-id)/(short-description)` | `user/merpenbeck/sandbox` |
 | Release | `release/(release-id)` | `release/2021-04-13`|
+| Support | `support/(id)-(short-description)` | `support/876-app-support-reboot-fix`|
 
 ### Definition of terms in the above table
 
