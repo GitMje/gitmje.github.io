@@ -12,7 +12,7 @@ tags:
 
 ## An opinionated convention for branches
 
-The forward slash is a little known trick in git naming conventions.  Instead of using a dash or underscore, the forward slash gets interpreted as a directory structure.  This is very nice for grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
+The forward slash is a little known trick for developers that are new to git.  Instead of using a dash or underscore, the forward slash gets interpreted by many IDEs and git tools as a directory structure.  This creates a very nice grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
 
 ### Example of a typical git repo without a convention
 
@@ -58,6 +58,17 @@ Beyond git UI clients, this convention is also built directly into the branch pr
 Notice that if you plan to use gitflow, you may want to use `bugfix` rather than `bug`, but you can also configure gitflow to use the `bug` branch prefix instead.
 
 ![gitflow](/assets/2021-03-01-git-naming-conventions/gitflow.png)
+
+### Source code repository support
+
+Hosted source code repositories, such as Azure DevOps Repos, have built-in support for the branch prefixes:
+![ado-example](/assets/2021-03-01-git-naming-conventions/ado-example.png)
+
+Additionally, tools like Bitbucket allow you to create branches with a branch prefix.
+![bb-1](/assets/2021-03-01-git-naming-conventions/bb-1.png)
+
+And filtering by branch prefix is also enabled based on the gitflow workflow.
+![bb-2](/assets/2021-03-01-git-naming-conventions/bb-2.png)
 
 ### Some places where teams have issues
 
