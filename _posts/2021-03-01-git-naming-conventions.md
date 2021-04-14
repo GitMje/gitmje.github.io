@@ -12,7 +12,7 @@ tags:
 
 ## An opinionated convention for branches
 
-The forward slash is a little known trick in git naming conventions.  Instead of using a dash or underscore, the forward slash gets interpreted as a directory structure.  This is very nice for grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.  This convention is also built directly into the branch prefixes for some git workflows like [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){:target="_blank"}.
+The forward slash is a little known trick in git naming conventions.  Instead of using a dash or underscore, the forward slash gets interpreted as a directory structure.  This is very nice for grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
 
 ### Example of a typical git repo without a convention
 
@@ -49,6 +49,14 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 - `(user-id)` is a user name such as `merpenbeck`.
 - `(short-description)` is a phrase in [kebab-case](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841){:target="_blank"}, meaning it is all lower case with zero or more dash separators, such as `recursive-loop-fix`.
 - `(release-id)` is a release identifier such as a semantic version number or date based.
+
+### Branch prefix support within git workflow tools
+
+Beyond git UI clients, this convention is also built directly into the branch prefixes for some git workflows like [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){:target="_blank"}.
+
+Notice that if you plan to use gitflow, you may want to use `bugfix` rather than `bug`, but you can also configure gitflow to use the `bug` branch prefix instead.
+
+![gitflow](/assets/2021-03-01-git-naming-conventions/gitflow.png)
 
 ### Some places where teams have issues
 
