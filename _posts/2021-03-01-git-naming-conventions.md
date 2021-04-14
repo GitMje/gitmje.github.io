@@ -22,7 +22,7 @@ The forward slash is a little known trick for developers that are new to git.  I
 
 ![typical-repo](/assets/2021-03-01-git-naming-conventions/typical-repo.png)
 
-Notice how tools most git client tools like [GitKraken](https://www.gitkraken.com/){:target="_blank"}, [Atlassian SourceTree](https://www.sourcetreeapp.com/){:target="_blank"}, [Visual Studio](https://visualstudio.microsoft.com/){:target="_blank"}, etc parse the branch name and convert them into a nice folder structure.
+Most git client tools like [GitKraken](https://www.gitkraken.com/){:target="_blank"}, [Atlassian SourceTree](https://www.sourcetreeapp.com/){:target="_blank"}, [Visual Studio](https://visualstudio.microsoft.com/){:target="_blank"}, etc parse the branch name and convert them into a nice folder structure.
 
 ### An example with Atlassian SourceTree
 
@@ -36,13 +36,14 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 
 | Type | Pattern | Example |
 |:-:|:--|--|
-| Hotfix | `hotfix/(id)-(short-description)` | `hotfix/234-yikes-fix-it` |
-| Feature | `feature/(id)-(short-description)` | `feature/647-update-radio-button` |
 | Bug | `bug/(id)-(short-description)` | `bug/689-pen-test-finding` |
+| Feature | `feature/(id)-(short-description)` | `feature/647-update-radio-button` |
 | Topic | `topic/(id)-(short-description)` | `topic/456-query-optimization` |
+| Hotfix | `hotfix/(id)-(short-description)` | `hotfix/234-yikes-fix-it` |
 | User | `user/(user-id)/(short-description)` | `user/merpenbeck/sandbox` |
 | Release | `release/(release-id)` | `release/2021-04-13`|
 | Support | `support/(id)-(short-description)` | `support/876-app-support-reboot-fix`|
+| Bugfix (alternative) | `bugfix/(id)-(short-description)` | `bugfix/689-pen-test-finding` |
 
 ### Definition of terms in the above table
 
