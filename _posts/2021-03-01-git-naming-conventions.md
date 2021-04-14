@@ -10,19 +10,19 @@ tags:
  - git
 ---
 
-## A opinionated naming convention for branches
+## An opinionated convention for branches
 
-The forward slash is a little known trick in git naming conventions.  Instead of using a dash or underscore, the forward slash gets interpreted as a directory structure.  This is very nice for grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
+The forward slash is a little known trick in git naming conventions.  Instead of using a dash or underscore, the forward slash gets interpreted as a directory structure.  This is very nice for grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.  This convention is also built directly into the branch prefixes for some git workflows like [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){:target="_blank"}.
 
-### An example of a typical git repo without a convention
+### Example of a typical git repo without a convention
 
 ![typical-repo](/assets/2021-03-01-git-naming-conventions/typical-repo.png)
 
-### An better organized naming convention
+### Better organized naming convention
 
 ![better-repo](/assets/2021-03-01-git-naming-conventions/better-repo.png)
 
-Notice how tools most git client tools like [GitKraken](https://www.gitkraken.com/), [Atlassian SourceTree](https://www.sourcetreeapp.com/), [Visual Studio](https://visualstudio.microsoft.com/), etc parse the branch name and convert them into a nice folder structure.
+Notice how tools most git client tools like [GitKraken](https://www.gitkraken.com/){:target="_blank"}, [Atlassian SourceTree](https://www.sourcetreeapp.com/){:target="_blank"}, [Visual Studio](https://visualstudio.microsoft.com/){:target="_blank"}, etc parse the branch name and convert them into a nice folder structure.
 
 ### An example with Atlassian SourceTree
 
@@ -31,7 +31,6 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 ### Visual Studio also recognizes this convention
 
 ![vs](/assets/2021-03-01-git-naming-conventions/visual-studio.png)
-
 
 ### Table of branch types
 
@@ -51,8 +50,10 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 - `(short-description)` is a phrase that is small and kebab-case, meaning it is all lower case with zero or more dash separators, such as `recursive-loop-fix`.
 - `(release-id)` is a release identifier such as a semantic version number or date based.
 
-### Topic branches
+### Some places where teams have issues
 
-Not everyone likes the term `topic` as a generalized way of referring to a bug or a feature, but it does make things a bit simplier.
+1. Not everyone likes the term `topic` as a generalized way of referring to a bug or a feature, but it does make things a bit simplier.  Decide as a team how you want to approach `topic` branches.
+2. Often team members accidently use `users` sometime and `user` others, which results in duplicate folders in these tools.  I typically advise to use the singular case as `feature`, `bug`, etc are all singular case as well.
+3. Case matters, so `Feature` and `feature` will similarily result in duplicate folders.  This comes down to being disciplined on naming and using scripting for building branches where you can.
 
 I hope that this will help in organizing your git repos.
