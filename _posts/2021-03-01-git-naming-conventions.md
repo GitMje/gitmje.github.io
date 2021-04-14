@@ -47,7 +47,7 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 
 - `(id)` is a work item id for a bug, user story, task, etc. For example `123`.
 - `(user-id)` is a user name such as `merpenbeck`.
-- `(short-description)` is a phrase that is small and kebab-case, meaning it is all lower case with zero or more dash separators, such as `recursive-loop-fix`.
+- `(short-description)` is a phrase in [kebab-case](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841){:target="_blank"}, meaning it is all lower case with zero or more dash separators, such as `recursive-loop-fix`.
 - `(release-id)` is a release identifier such as a semantic version number or date based.
 
 ### Some places where teams have issues
