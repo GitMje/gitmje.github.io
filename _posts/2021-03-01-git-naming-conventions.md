@@ -12,7 +12,9 @@ tags:
 
 ## An opinionated convention for branches
 
-The forward slash is a little known trick for developers that are new to git.  Instead of using a dash or underscore, the forward slash gets interpreted by many IDEs and git tools as a directory structure.  This creates a very nice grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
+The forward slash is a little known trick for developers that are new to git.  Instead of using a dash or underscore, the forward slash gets interpreted by many IDEs and git tools as a directory structure.  This creates a very nice grouping.
+
+As an example, creating a branch named `feature/647-update-radio-button` rather something like `feature-647-update-radio-button` will result in better organization within your git tools.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
 
 ### Slashes in git branch names result in better organized naming convention
 
