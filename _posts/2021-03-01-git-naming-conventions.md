@@ -53,7 +53,7 @@ Notice how tools most git client tools like [GitKraken](https://www.gitkraken.co
 ### Some places where teams have issues
 
 1. Not everyone likes the term `topic` as a generalized way of referring to a bug or a feature, but it does make things a bit simplier.  Decide as a team how you want to approach `topic` branches.
-2. Often team members accidently use `users` sometime and `user` others, which results in duplicate folders in these tools.  I typically advise to use the singular case as `feature`, `bug`, etc are all singular case as well.
+2. Often team members accidently use `users` rather than `user`, which results in duplicate folders in these tools.  I typically advise to use the singular case as `feature`, `bug`, etc are all singular case as well.
 3. Case matters, so `Feature` and `feature` will similarily result in duplicate folders.  This comes down to being disciplined on naming and using scripting for building branches where you can.
 
 I hope that this will help in organizing your git repos.
