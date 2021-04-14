@@ -14,13 +14,13 @@ tags:
 
 The forward slash is a little known trick for developers that are new to git.  Instead of using a dash or underscore, the forward slash gets interpreted by many IDEs and git tools as a directory structure.  This creates a very nice grouping.  Notice in the pictures below how the grouping makes the repo look different with the forward slashes.
 
+### Slashes in git branch names result in better organized naming convention
+
+![better-repo](/assets/2021-03-01-git-naming-conventions/better-repo.png)
+
 ### Example of a typical git repo without a convention
 
 ![typical-repo](/assets/2021-03-01-git-naming-conventions/typical-repo.png)
-
-### Better organized naming convention
-
-![better-repo](/assets/2021-03-01-git-naming-conventions/better-repo.png)
 
 Notice how tools most git client tools like [GitKraken](https://www.gitkraken.com/){:target="_blank"}, [Atlassian SourceTree](https://www.sourcetreeapp.com/){:target="_blank"}, [Visual Studio](https://visualstudio.microsoft.com/){:target="_blank"}, etc parse the branch name and convert them into a nice folder structure.
 
