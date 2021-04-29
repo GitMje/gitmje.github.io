@@ -25,16 +25,7 @@ So running a command like `Write-Verbose -Message 'Hello World!'` results in no 
 
 ## Table of output Streams
 
-| Stream # | Stream Types | Redirection operator | Write Cmdlet |Cmdlet Parameters | Preference Variables | Default Preference Variable Value |
-|:-:|:--|:-:|--|--|--|--|
-| 1 | **Success/Output Stream** | `1>` |[`Write-Output`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-output){:target="_blank"} | n/a | n/a | n/a |
-| 2 | **Error stream** | `2>` | [`Write-Error`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-error){:target="_blank"} | -ErrorAction | `$ErrorActionPreference` | `Continue` |
-| 3 | **Warning stream** | `3>` | [`Write-Warning`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-warning){:target="_blank"} | -WarningAction | `$WarningPreference` | `Continue` |
-| 4 | **Verbose stream** | `4>` | [`Write-Verbose`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-verbose){:target="_blank"} | -Verbose | `$VerbosePreference` | `SilentlyContinue` |
-| 6 | **Debug stream** | `5>` | [`Write-Debug`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-debug){:target="_blank"} | -Debug| `$DebugPreference` | `SilentlyContinue` |
-| 6 | **Information stream** | `6>` | [`Write-Information`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-information) {:target="_blank"} | -InformationAction | `$InformationPreference` | `SilentlyContinue` |
-| n/a | **Progess stream** | n/a | [`Write-Progress`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-progress){:target="_blank"} |  n/a |`$ProgressPreference` | `Continue` |
-| n/a | **All Steams** | `*>` | n/a | n/a | n/a | n/a |
+![pipeline](/assets/2021-04-28-powershell-streams/1_1.png)
 
 Note that [`Write-Host`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host){:target="_blank"} has been refactored starting in PowerShell 5.0 to be a wrapper around the `Write-Information` cmdlet.
 
