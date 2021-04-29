@@ -48,7 +48,7 @@ Since the Verbose stream is not passed through the pipeline, operations like the
 
 `Write-Verbose -Message 'Hello World!' -Verbose | Out-File .\B.txt`
 
-The redirection operator `4>&1` looks cryptic, but it makes sense when you parse it.  It means that the Verbose stream (4) is redirected to the Success/Output Stream (1).
+The redirection operator `4>&1` looks cryptic, but it makes sense when you parse it.  It means that the Verbose stream (4) is redirected to the Success/Output Stream (1).  This action is shown graphically in the image above.
 
 `Write-Verbose -Message 'Hello World!' -Verbose 4>&1 | Out-File .\B.txt`
 
