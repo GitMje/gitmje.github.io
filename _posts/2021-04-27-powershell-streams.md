@@ -64,5 +64,5 @@ The result is as shown.
 
 - [Cmdlet Common Parameters](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters){:target="_blank"}
 
-- [Redirection operators](https://www.sconstantinou.com/powershell-redirection-operators/)){:target="_blank"}
-- [Understanding Streams, Redirection, and Write-Host in PowerShell](https://devblogs.microsoft.com/scripting/understanding-streams-redirection-and-write-host-in-powershell/)){:target="_blank"}
+- [Redirection operators](https://www.sconstantinou.com/powershell-redirection-operators/){:target="_blank"}
+- [Understanding Streams, Redirection, and Write-Host in PowerShell](https://devblogs.microsoft.com/scripting/understanding-streams-redirection-and-write-host-in-powershell/){:target="_blank"}
