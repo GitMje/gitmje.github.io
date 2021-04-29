@@ -18,7 +18,6 @@ I've put together the information below as a guide for some PowerShell Stream co
 
 Most computing systems are built around only three standard streams: **stdin** (stardard in), **stdout** (standard out), and **stderr** (standard error).  PowerShell is build with 6 standard output streams (as shown below).  Note, as of this writing, the Progress Stream is under development.
 
-
 When the cmdlet runs, some of the streams are enabled by default (a value of "Continue") and some are not (a value of "SilentlyContinue").  As an example, the Success/Output, Error stream, and Warning streams are enabled by default and the Verbose and Debug streams are not.  
 
 So running a command like `Write-Verbose -Message 'Hello World!'` results in no operation.  These streams can be enabled by using the Cmdlet's common parameters.  For example, `Write-Verbose -Message 'Hello World!' -Verbose` will result in `VERBOSE: Hello World!` being displayed on the commandline.  The `-Verbose` flag tells the cmdlet to enable the verbose stream with this operation.  Similarly in a script, you can use a Preference Variable like `$VerbosePreference = 'Continue'`.  This will result in the entire script enabling the verbose stream.  So the same command of `Write-Verbose -Message 'Hello World'` will result in `VERBOSE: Hello World!` being displayed on the commandline.
@@ -52,9 +51,13 @@ The redirection operator `4>&1` looks cryptic, but it makes sense when you parse
 
 `Write-Verbose -Message 'Hello World!' -Verbose 4>&1 | Out-File .\B.txt`
 
-The result is as shown.
+The result is as shown below.
 
-![pipeline](/assets/2021-04-28-powershell-streams/3_1.png)
+![redirection1](/assets/2021-04-28-powershell-streams/3_1.png)
+
+Additionally, operations like the following do not work with the conventional > redirection symbol as this redirects only for the success/output stream. Using the redirection of 4> to a file tells PowerShell to push the Verbose stream to the file named ".\A.txt" in the example below.
+
+![redirection2](/assets/2021-04-28-powershell-streams/3_2.png)
 
 ## More information
 
