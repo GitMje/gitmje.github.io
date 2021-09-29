@@ -4,7 +4,7 @@ title: Building DRY Pipelines
 date: 2021-09-20 22:00:00
 author: Michael Erpenbeck
 summary: DRY Azure DevOps pipelines
-categories: devops,azure, ADO
+categories: devops
 thumbnail: jekyll
 tags:
   - devops
