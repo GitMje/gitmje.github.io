@@ -22,7 +22,7 @@ This may be obvious, but the client-side hooks are designed to control actions t
 These are stored in the repo's `/.git/hooks` directory.  There are sample hooks in the hooks directory that are not active with the post-fix of `.sample`.  If you remove the post-fix and do a `chmod +x <filename>` on the hook, it will become active.
 
 Here is an example of the `/.git/hooks/` directory:
-![githook_intro_example1]({{ "/assets/githook_intro_example1.png" | absolute_url }})
+![githook_intro_example1](/assets/githook_intro_example1.png)
 
 Things that you may want to control with client-side hooks are:
 
@@ -36,4 +36,4 @@ Something to note with this technique is that client-side hooks are not stored a
 
 If you are hosting your git repository in a host like GitHub, Bitbucket, etc, you can also have a server-side hook.  The types of events that can be controlled on the server-side is a bit different because it focused on network events.  An example of this is the `pre-push` hook, which controls the `git push` event on the server-side (host's side).  I will post more about server-side hooks in future blog posts.
 
-For a good listing of git hooks, see [digtial ocean's blog](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks).
+For a good listing of git hooks, see [digtial ocean's blog](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks){:target="_blank"}.

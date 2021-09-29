@@ -19,6 +19,6 @@ But then one of the scariest possible scenarios happened...a company I was worki
 
 Below is an interesting article on pipeline security for vulnerables of argument injection, source code stealing, and shared infrastructure attacks.
 
-See [Let's Hack a Pipeline](https://devblogs.microsoft.com/devops/pipeline-argument-injection/)
+See [Let's Hack a Pipeline](https://devblogs.microsoft.com/devops/pipeline-argument-injection/){:target="_blank"}
 
 In a world with layoffs and restructuring fueling current and past disgruntled employees, securing your pipelines should become a standard practice for your engineering teams.

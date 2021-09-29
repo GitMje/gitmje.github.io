@@ -13,11 +13,17 @@ tags:
 
 ## Overview ##
 
-My team has had beem getting countless questions for SOC2, HiTrust, and SOX audits asking for data from various systems that need to be combined and reported on with short deadlines, especially from our Azure DevOps Services instance.
+My team has had been getting countless questions for SOC2, HiTrust, and SOX audits asking for data from various systems that need to be combined and reported on with short deadlines, especially regarding how our Azure DevOps Services instance is configured.
 
 I found myself wanting to answer simple questions like, "Who has been added/removed from our Azure DevOps Services instance and who made these changes?".  In this quick post, I will show you how Azure DevOps Audit streams can help solve these questions.
 
 Azure DevOps allows you to push data to Log Analytics (Azure Monitor Log) in order to report on the data and combine the data with other logs aggregaged from other sources. Streaming Azure DevOps data to Log Analytics is easy to setup, extremely insightful once implemented, has no maintenance, and is cheap to run (basicially free).
+
+![ado-audit-arch](/assets/2020-11-25-ado-auditing/ado-audit-arch.png)
+
+Above is a diagram showing the overall architecture that I have built.  The heart of the monitoring system is Azure Monitor Logs (Log Analytics) on the upper right hand side of the diagram.  Log Analytics is fed by all of the lines from sources that are aggregating logs and events into it.  This becomes a DevOps Datawarehouse that allows employees of the company (e.g., the DevSecOps engineer in the diagram) to query basic events and create more sophisticated queries to gain instant insights into the state of the enterprise.  Additionally the engineers can build reports in PowerBI and alerts to gain the next level of control.
+
+For this post, I will be mainly focused on the "Azure DevOps Audit Logs" that is ingested through the Azure DevOps stream mechanism to Log Analytics.  In future posts, I will discuss the webhook techniques.
 
 ## Basics - Step by step instructions ##
 
@@ -66,4 +72,4 @@ If we do a query to see all of the Areas we can see the following result.  Note 
 
 ![ado-audit-7](/assets/2020-11-25-ado-auditing/ado-audit-7.png)
 
-Here is the [full list of possible Areas](https://docs.microsoft.com/en-us/azure/devops/organizations/audit/azure-devops-auditing?view=azure-devops&tabs=preview-page#areas){:target="_blank"}.  An especially useful area is the `Pipelines` and `Releases` areas.  In future blog posts, I will document my current use of these areas.
+Here is the [full list of possible Areas](https://docs.microsoft.com/en-us/azure/devops/organizations/audit/azure-devops-auditing?view=azure-devops&tabs=preview-page#areas){:target="_blank"}.  An especially useful area is the `Pipelines` and `Release` areas.  In a [future blog post](https://code.erpenbeck.io/devops,azure/2020/11/28/ado-release-auditing/){:target="_blank"}, I will document my current use of these areas.

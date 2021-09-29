@@ -12,4 +12,4 @@ tags:
 
 Just a quick note ... this is the best visual break down of Deployment patterns that I've seen.
 
-See [Understanding Azure DevOps Deployment Patterns](https://cache404.net/understanding-azure-devops-deployment-patterns/)
+See [Understanding Azure DevOps Deployment Patterns](https://cache404.net/understanding-azure-devops-deployment-patterns/){:target="_blank"}
