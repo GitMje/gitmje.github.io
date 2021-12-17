@@ -1,13 +1,13 @@
 ---
-layout:     post
-title:      git Version Numbering
-date:       2021-12-16 22:00:00
-author:     Michael Erpenbeck
-summary:    git Version Numbering
+layout: post
+title: git Version Numbering
+date: 2021-12-16 22:00:00
+author: Michael Erpenbeck
+summary: git Version Numbering
 categories: git
-thumbnail:  jekyll
+thumbnail: jekyll
 tags:
- - git
+  - git
 ---
 
 ## Summary
@@ -32,14 +32,13 @@ Due to SemVer's focus on breaking changes, I prefer the renaming of the above st
 
 ## CalVer 📆
 
+Years ago, I worked at a company that was very strict on version numbering. The decision of the final version number went to the Director and CTO levels for the final decision. I asked the CTO if we could do an experiment and use `YY.M.D.I` where each number came from the date of the build. It is basically just a date stamp.
 
-Years ago, I worked at a company that was very strict on version numbering.  The decision of the final version number went to the Director and CTO levels for the final decision.  I asked the CTO if we could do an experiment and use `YY.M.D.I` where each number came from the date of the build.  It is basically just a date stamp.
+My argument was that SemVer that is done by humans is arbitrary and subjective. When most engineers would look at a build/release and the first question was "when was this built?". At least with the date encoded in the version number, you always know what date it came from and it always increments forward but not so quickly that the <span style="color:royalblue">Major</span> number will be a ridiculous value in the thousands or 10's of thousands (within 1,000+ years, the app will be rewritten or will be Captain Kirk's responsibility, not ours :) ). We tried this approach and started with 13.8.1.1 (meaning the first build on August 1st of 2013). The approach worked really nicely and did not require human interaction to decide or increment the numbers as scripting could figure out all of the elements above.
 
-My argument was that SemVer that is done by humans is arbitrary and subjective. When most engineers would look at a build/release and the first question was "when was this built?".  At least with the date encoded in the version number, you always know what date it came from and it always increments forward but not so quickly that the <span style="color:royalblue">Major</span> number will be a ridiculous value in the thousands or 10's of thousands (within 1,000+ years, the app will be rewritten or will be Captain Kirk's responsibility, not ours :) ).  We tried this approach and started with 13.8.1.1 (meaning the first build on August 1st of 2013).  The approach worked really nicely and did not require human interaction to decide or increment the numbers as scripting could figure out all of the elements above.
+A similar approach that has become popular is called CalVer. Here's a good [comparison between SemVer and CalVer](https://mikestaszel.com/2021/04/03/semver-vs-calver-and-why-i-use-both/).
 
-A similar approach that has become popular is called CalVer.  Here's a good [comparison between SemVer and CalVer](https://mikestaszel.com/2021/04/03/semver-vs-calver-and-why-i-use-both/).
-
-In 2019, I worked at a company and they liked this approach, but their current software was on `8.x.x`. They thought that decrementing that value to anything less than 8 or incrementing to it 19 or 2019 would confuse the customer, so the `YY`/`YYYY` approach was out.  So I offered two solutions, either go with `9.x.x` (meaning that you always subtract the current year by 2010), or stay with `8.x.x` and always subtract by 2011.  They went with the 2011 approach to keep the continuity of the <span style="color:royalblue">Major</span> number.  It worked nicely, but didn't help much with the "when was it built" question as it wasn't as intuitive to subtract by an arbitrary number.
+In 2019, I worked at a company and they liked this approach, but their current software was on `8.x.x`. They thought that decrementing that value to anything less than 8 or incrementing to it 19 or 2019 would confuse the customer, so the `YY`/`YYYY` approach was out. So I offered two solutions, either go with `9.x.x` (meaning that you always subtract the current year by 2010), or stay with `8.x.x` and always subtract by 2011. They went with the 2011 approach to keep the continuity of the <span style="color:royalblue">Major</span> number. It worked nicely, but didn't help much with the "when was it built" question as it wasn't as intuitive to subtract by an arbitrary number.
 
 ## Side Notes 📝
 
