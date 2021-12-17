@@ -42,7 +42,9 @@ We tried this approach and started with 13.8.1.1 (meaning the first build on Aug
 
 A similar approach that has become popular is called CalVer. Here's a good [comparison between SemVer and CalVer](https://mikestaszel.com/2021/04/03/semver-vs-calver-and-why-i-use-both/).
 
-In 2019, I worked at a company and they liked this approach, but their current software was on `8.x.x`. They thought that decrementing that value to anything less than 8 or incrementing to it 19 or 2019 would confuse the customer, so the `YY`/`YYYY` approach was out. So I offered two solutions, either go with `9.x.x` (meaning that you always subtract the current year by 2010), or stay with `8.x.x` and always subtract by 2011. They went with the 2011 approach to keep the continuity of the <span style="color:royalblue">Major</span> number. It worked nicely, but didn't help much with the "when was it built" question as it wasn't as intuitive to subtract by an arbitrary number.
+In 2019, I worked at a company and they liked this approach, but their current software was on `8.x.x`. They thought that decrementing that value to anything less than 8 or incrementing to it 19 or 2019 would confuse the customer, so the `YY`/`YYYY` approach was out. 
+
+So I offered two solutions, either go with `9.x.x` (meaning that you always subtract the current year by 2010), or stay with `8.x.x` and always subtract by 2011. They went with the 2011 approach to keep the continuity of the <span style="color:royalblue">Major</span> number. It worked nicely, but didn't help much with the "when was it built" question as it wasn't as intuitive to subtract by an arbitrary number.
 
 ## Side Notes 📝
 
@@ -50,3 +52,7 @@ In 2019, I worked at a company and they liked this approach, but their current s
 - Many engineers assume that version numbers for packages (like npm and NuGet) should be stamped with the same numbers as the main release.  This is not the case.  Every pipeline should use their own version numbers.  If this is confusing to the customer, it's fine to create a manifest of which package versions go in to build a specific customer version of the code (and sometime marketing customer version numbers can differ from the pipeline numbers, which is fine although not as efficient).
 - With the date stamp CalVer approach, a common gotcha is that you need to ensure that you define the time zone that the version number will use. For example, build servers with different time zones can confuse the teams.  Some teams use UTC to be fully international and some use the default time zone of the company (e.g., US EST, US CST, etc).
 - Some teams use `-alpha`/`-beta`/etc pre-release labels rather than or in addition to an <span style="color:yellow">BuildNumber</span> value to signify the maturity of the build.
+
+## Final note ❌
+
+In the end, both SemVer and CalVer are fantastic standards that (once fully-automated by tools like gitVersion) will save your team lots of time and energy and will fuel your agility.
