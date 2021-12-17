@@ -12,22 +12,25 @@ tags:
 
 ## Summary
 
-There’s two main standard version numbering schemes that I prefer working with:
-1. [SemVer](https://semver.org/) or 
+When releasing a new product, you will want to version the new software.  A lot of git software versioning standards exist, but my the two schemes that I prefer working with are:
+1. [SemVer](https://semver.org/) or
 2. [CalVer](https://calver.org/).
 
 ## Which to use
-Both techniques use the 
-<span style="color:royalblue">Major</span>.<span style="color:green">Minor</span>.<span style="color:orange">Patch</span>.<span style="color:yellow">Increment</span> structure.
+Both techniques use the <span style="color:royalblue">Major</span>.<span style="color:green">Minor</span>.<span style="color:orange">Patch</span>.[<span style="color:yellow">BuildNumber]</span> structure. See [Major.Minor.Patch](https://medium.com/fiverr-engineering/major-minor-patch-a5298e2e1798) for a good definition of the terms.
 
+The decision criteria for which to use is very simple, if the repository that you are building has clients with strong dependencies.  This is often the case for repositories with web APIs and open source software.  The reason for this is that SemVer focuses on the amount of change to the codebase to communicate the downstream affect on clients.
 
-The decision criteria for which to use is very simple, if the repository that you are building has clients with strong dependencies.  This is often the case for repositories with web APIs and open source software.  The reason for this is that SemVer focuses on the amount of change to the codebase to communicate the downstream affect on clients. 
+## SemVer 💔
 
-## SemVer
+SemVer can be fairly tricky but some tools like [gitVersion](https://github.com/GitTools/GitVersion) can help with this.  I believe that a build/deployment systems that require engineers to make decisions such as whether to bump a major/minor version number are subjective, inefficient, and waist engineer's time  on decisions that do not matter much.  Automated tools such as gitVersion creates a standardized rule set that is stored directly in git.  [standard-version](https://github.com/conventional-changelog/standard-version) is an alternative tool, but the same concept.  
 
-SemVer can be fairly tricky but some tools like [gitVersion](https://github.com/GitTools/GitVersion) can help with this.  I believe that a build/deployment systems that require engineers to make decisions such as whether to bump a major/minor version number are subjective, inefficient, and waist engineer's time  on decisions that do not matter much.  Automated tools such as gitVersion creates a standardized rule set that is stored directly in git.  [standard-version](https://github.com/conventional-changelog/standard-version) is an alternative tool, but the same concept.
+Due to SemVer's focus on breaking changes, I prefer the renaming of the above structure to <span style="color:royalblue">Breaking</span>.<span style="color:green">Feature</span>.<span style="color:orange">Fix</span>.[<span style="color:yellow">BuildNumber]</span>.  Where:
+-  <span style="color:royalblue">Breaking</span> represents a incompatible change with the previous version, 
+- <span style="color:green">Feature</span> represents a backwards compatible functionality and 
+- <span style="color:orange">Fix</span> is a backwards compatable bug fix.
 
-## CalVer
+## CalVer 📆
 
 
 Years ago, I worked at a company that was very strict on version numbering.  The decision of the final version number went to the Director and CTO levels for the final decision.  I asked the CTO if we could do an experiment and use `YY.M.D.I` where each number came from the date of the build.  It is basically just a date stamp.
@@ -38,8 +41,9 @@ A similar approach that has become popular is called CalVer.  Here's a good [com
 
 In 2019, I worked at a company and they liked this approach, but their current software was on `8.x.x`. They thought that decrementing that value to anything less than 8 or incrementing to it 19 or 2019 would confuse the customer, so the `YY`/`YYYY` approach was out.  So I offered two solutions, either go with `9.x.x` (meaning that you always subtract the current year by 2010), or stay with `8.x.x` and always subtract by 2011.  They went with the 2011 approach to keep the continuity of the <span style="color:royalblue">Major</span> number.  It worked nicely, but didn't help much with the "when was it built" question as it wasn't as intuitive to subtract by an arbitrary number.
 
-## Side Notes
+## Side Notes 📝
 
-- In Azure DevOps Pipelines, the YAML [counter](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/expressions?view=azure-devops#counter) mechanism can be very useful as it will increment the number until a dependent variable increments at which time the counter resets.  For example, the <span style="color:yellow">Increment</span> number is a natural fit for this.
+- In Azure DevOps Pipelines, the YAML [counter](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/expressions?view=azure-devops#counter) mechanism can be very useful as it will increment the number until a dependent variable increments at which time the counter resets.  For example, the <span style="color:yellow">BuildNumber</span> number is a natural fit for this.
 - Many engineers assume that version numbers for packages (like npm and NuGet) should be stamped with the same numbers as the main release.  This is not the case.  Every pipeline should use their own version numbers.  If this is confusing to the customer, it's fine to create a manifest of which package versions go in to build a specific customer version of the code (and sometime marketing customer version numbers can differ from the pipeline numbers, which is fine although not as efficient).
-- With the date stamp CalVer approach, a common gotcha is that you need to ensure that you define the time zone that the version number will use. For example, build servers with different time zones can confuse the teams.  Some teams use UTC to be fully international and some use the default time zone of the company (e.g., EST).
+- With the date stamp CalVer approach, a common gotcha is that you need to ensure that you define the time zone that the version number will use. For example, build servers with different time zones can confuse the teams.  Some teams use UTC to be fully international and some use the default time zone of the company (e.g., US EST, US CST, etc).
+- Some teams use `-alpha`/`-beta`/etc pre-release labels rather than or in addition to an <span style="color:yellow">BuildNumber</span> value to signify the maturity of the build.
