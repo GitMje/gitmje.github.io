@@ -8,4 +8,4 @@ Write-Verbose "Install bundler"
 #bundle install
 
 Write-Verbose "Test site"
-#bundle exec jekyll serve
+bundle exec jekyll serve
