@@ -17,7 +17,7 @@ When releasing a new product, you will want to version the new software.  A lot 
 2. [CalVer](https://calver.org/).
 
 ## Which to use ❓
-Both techniques use the <span style="color:royalblue">Major</span>.<span style="color:green">Minor</span>.<span style="color:orange">Patch</span>.[<span style="color:yellow">BuildNumber]</span> structure. See [Major.Minor.Patch](https://medium.com/fiverr-engineering/major-minor-patch-a5298e2e1798) for a good definition of the terms.
+Both techniques use the <span style="color:royalblue">Major</span>.<span style="color:green">Minor</span>.<span style="color:orange">Patch</span>[.<span style="color:yellow">BuildNumber]</span> structure. See [Major.Minor.Patch](https://medium.com/fiverr-engineering/major-minor-patch-a5298e2e1798) for a good definition of the terms.
 
 The decision criteria for which to use is very simple, if the repository that you are building has clients with strong dependencies.  This is often the case for repositories with web APIs and open source software.  The reason for this is that SemVer focuses on the amount of change to the codebase to communicate the downstream affect on clients.
 
@@ -25,7 +25,7 @@ The decision criteria for which to use is very simple, if the repository that yo
 
 SemVer can be fairly tricky but some tools like [gitVersion](https://github.com/GitTools/GitVersion) can help with this.  I believe that a build/deployment systems that require engineers to make decisions such as whether to bump a major/minor version number are subjective, inefficient, and waist engineer's time  on decisions that do not matter much.  Automated tools such as gitVersion creates a standardized rule set that is stored directly in git.  [standard-version](https://github.com/conventional-changelog/standard-version) is an alternative tool, but the same concept.  
 
-Due to SemVer's focus on breaking changes, I prefer the renaming of the above structure to <span style="color:royalblue">Breaking</span>.<span style="color:green">Feature</span>.<span style="color:orange">Fix</span>.[<span style="color:yellow">BuildNumber]</span>.  Where:
+Due to SemVer's focus on breaking changes, I prefer the renaming of the above structure to <span style="color:royalblue">Breaking</span>.<span style="color:green">Feature</span>.<span style="color:orange">Fix</span>[.<span style="color:yellow">BuildNumber]</span>.  Where:
 -  <span style="color:royalblue">Breaking</span> represents a incompatible change with the previous version, 
 - <span style="color:green">Feature</span> represents a backwards compatible functionality and 
 - <span style="color:orange">Fix</span> is a backwards compatable bug fix.
