@@ -23,7 +23,7 @@ The decision criteria that I use is very simple, if the repository that you are 
 
 ## SemVer 💔
 
-SemVer can be tricky but some tools like [gitVersion](https://github.com/GitTools/GitVersion) can help with this.  I believe that a build/deployment systems that require engineers to make decisions such as whether to bump a major/minor version number are subjective, inefficient, and waist engineer's time  on decisions that do not matter much.  Automated tools such as gitVersion creates a standardized rule set that is stored directly in git.  [standard-version](https://github.com/conventional-changelog/standard-version) is an alternative tool, but the same concept.  
+SemVer can be tricky but some tools like [gitVersion](https://github.com/GitTools/GitVersion) and [standard-version](https://github.com/conventional-changelog/standard-version) can help make it much simplier.  I believe that a build/deployment systems should not require engineers to decide whether to bump a major/minor version number but should rather run on an automated rule set of when to bump the numbers.  Having engineers manually bump the version numbers is subjective, inefficient, and waist engineer's time.
 
 Due to SemVer's focus on breaking changes, I prefer the renaming of the above structure to <span style="color:royalblue">Breaking</span>.<span style="color:green">Feature</span>.<span style="color:orange">Fix</span>[.<span style="color:yellow">BuildNumber]</span>.  Where:
 -  <span style="color:royalblue">Breaking</span> represents a incompatible change with the previous version, 
