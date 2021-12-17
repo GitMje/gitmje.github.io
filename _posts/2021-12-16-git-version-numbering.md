@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      git Version Numbering
-date:       2021-04-27 22:00:00
+date:       2021-12-16 22:00:00
 author:     Michael Erpenbeck
 summary:    git Version Numbering
 categories: git
