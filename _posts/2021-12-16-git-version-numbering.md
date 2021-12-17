@@ -16,7 +16,7 @@ When releasing a new product, you will want to version the new software.  A lot 
 1. [SemVer](https://semver.org/) or
 2. [CalVer](https://calver.org/).
 
-## Which to use
+## Which to use ❓
 Both techniques use the <span style="color:royalblue">Major</span>.<span style="color:green">Minor</span>.<span style="color:orange">Patch</span>.[<span style="color:yellow">BuildNumber]</span> structure. See [Major.Minor.Patch](https://medium.com/fiverr-engineering/major-minor-patch-a5298e2e1798) for a good definition of the terms.
 
 The decision criteria for which to use is very simple, if the repository that you are building has clients with strong dependencies.  This is often the case for repositories with web APIs and open source software.  The reason for this is that SemVer focuses on the amount of change to the codebase to communicate the downstream affect on clients.
