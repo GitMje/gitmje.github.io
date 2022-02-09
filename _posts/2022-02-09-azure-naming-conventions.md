@@ -4,10 +4,10 @@ title: Azure Naming Conventions
 date: 2022-02-09 22:00:00
 author: Michael Erpenbeck
 summary: Azure naming conventions
-categories: azure
+categories: Azure
 thumbnail: jekyll
 tags:
-  - azure
+  - Azure
 ---
 
 ## Summary
