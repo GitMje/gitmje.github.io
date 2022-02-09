@@ -46,7 +46,7 @@ Below I have my recommendations.  The items in the angular brackets means that i
 
 ## Glossary
 
-### <DepartmentCode>
+### DepartmentCode
 
 2 characters to represent the associated Department. (see examples below)
 | Abbreviation | Description |
@@ -55,9 +55,9 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | IT | Information Technologies |
 | EN | Engineering |
 
-### <TeamCode>
-3 letter code for the team that the resource is related to.  This could be a product that you're working on, or team within a department.
+### TeamCode
 
+3 letter code for the team that the resource is related to.  This could be a product that you're working on, or team within a department.
 
 |Code| Team Name |
 |--|--|
@@ -66,7 +66,7 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | **dot** | The DevOps team |
 | **spm** | The Stay Puft Marshmallow development team |
 
-### <LocationCode>
+### LocationCode
 
 3 characters to represent the location of the VM.  This can be a cloud region or it can be a physical datacenter.  I try to use airport appreviations for the city if one exists that defines the city.
 
@@ -80,7 +80,7 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | WET | AWS US East  |
 | WWT | AWS US West  |
 
-### <ServiceLevelCode>
+### ServiceLevelCode
 
 1 character for the lifecycle stage of development.
 
@@ -102,7 +102,8 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | U | uat | **U**ser Acceptance Testing |
 | X | sbox | Sandbo**x** |
 
-## <PurposeCode>
+### PurposeCode
+
 3 character code for the role/purpose of the VM.
 
 |Code| Description |
@@ -115,5 +116,6 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | SQL | SQL Server |
 | WEB | Web App/API Server |
 
-## <Description>
+### Description
+
 Free form field for any notes or descriptions about the resources.
