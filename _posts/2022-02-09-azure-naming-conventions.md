@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Azure Naming Conventions an Opinionated Approach
+title: Azure Naming Conventions
 date: 2022-02-09 22:00:00
 author: Michael Erpenbeck
 summary: Azure naming conventions
