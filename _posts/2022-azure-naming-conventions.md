@@ -24,6 +24,8 @@ Regarding the subscription naming, I'm a big believer in getting the subscriptio
 
 Additionally, I like to use a `-prod` and a `-nonprod` designation on subscriptions for regulated companies that need to keep different controls and budgeting on production vs non-production environments and different controls on the sensitive data stored in them.  For example, developers can access `-nonprod` freely, but `-prod` is more controlled.
 
+Below I have my recommendations.  The items in the angular brackets means that it is defined in the [Glossary](#glossary) below.
+
 ## General Entities
 
 | Entity | Scope | Length | Casing | Valid Characters | Required Pattern | Example |
