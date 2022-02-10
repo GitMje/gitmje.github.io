@@ -24,19 +24,23 @@ Regarding the subscription naming, I'm a big believer in getting the subscriptio
 
 Additionally, I like to use a `-prod` and a `-nonprod` designation on subscriptions for regulated companies that need to keep different controls and budgeting on production vs non-production environments and different controls on the sensitive data stored in them.  For example, developers can access `-nonprod` freely, but `-prod` is more controlled.
 
-Below I have my recommendations.  The items in the angular brackets means that it is defined in the [Glossary](#glossary) below. `?` means that the code is optional.  I also use some of these codes for Azure Tags for a convenient way to query for the information.  You may decide that you prefer to use some of these codes as tags instead of putting them into your resource names at all, in the end the choice is up to you.  I will write more on Azure Tagging in the future, but here's a [good article](https://cloudskills.io/blog/azure-policy-tagging) if you're not familiar with it.
+Below I have my recommendations.  The items in the angular brackets means that it is defined in the [Glossary](#glossary) below. `?` means that the code is optional but I suggest that you're final standards have no optional items.  I also use some of these codes for Azure Tags for a convenient way to query for the information.  You may decide that you prefer to use some of these codes as tags instead of putting them into your resource names at all, in the end the choice is up to you.  I will write more on Azure Tagging in the future, but here's a [good article](https://cloudskills.io/blog/azure-policy-tagging) if you're not familiar with it.
 
 ## General Entities
 
 | Entity | Scope | Length | Casing | Valid Characters | Required Pattern | Example |
 |--|--|--|--|--|--|--|
-| **Subscription** | Subscription | 1-64 | Insensitive | All characters | `<DepartmentCode>-<TeamCode>-<ServiceLevelCode>` | `it-sap-prod` |
-| **Resource Group** | Subscription | 1-90 | Insensitive | Alphanumeric, hyphens, underscores, periods (except at end), and parentheses | `<DepartmentCode>-?<TeamCode>-?<PurposeCode>-<ServiceLevelCode>-<LocationCode>--rg` | `it-sap-env-prod-zet-rg` |
+| **Subscription** | Subscription | 1-64 | Insensitive | All characters | `?<Company>-<DepartmentCode>-<WorkloadCode>-<ServiceLevelCode>` | `it-sap-prod` |
+| **Resource Group** | Subscription | 1-90 | Insensitive | Alphanumeric, hyphens, underscores, periods (except at end), and parentheses | `?<DepartmentCode>-?<WorkloadCode>-?<PurposeCode>-<ServiceLevelCode>-<LocationCode>-rg` | `it-sap-env-prod-zet-rg` |
 | **Tag** | Associated Entity | 512 (named), 256 (value) | Insensitive | Alphanumeric including Unicode characters; special characters except <, >, %, &, \, ?, /. See limitations here . Maximum of [50](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json#limitations). | `"key" : "value"` | `"department" : "DevOps"` |
-| **Key Vault** | Global | 3-24 | Insensitive | Alphanumeric and hyphens | `?<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-vlt` | `it-sap-dev-vlt` |
-| **Service Principal** | Scope-dependent | 1-120 | Insensitive | Alphanumeric and hyphens (not < > ; & %) | `?<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-<Description>-sp` | `it-sap-dev-zet-reader-sp` |
+| **Key Vault** | Global | 3-24 | Insensitive | Alphanumeric and hyphens | `<Company>-?<DepartmentCode>-?<WorkloadCode>-<ServiceLevelCode>-vlt` | `acme-it-sap-dev-kv` |
+| **Service Principal** | Scope-dependent | 1-120 | Insensitive | Alphanumeric and hyphens (not < > ; & %) | `?<DepartmentCode>-?<WorkloadCode>-<ServiceLevelCode>-<LocationCode>-<AccessCode>-sp` | `it-sap-dev-zet-reader-sp` |
 
 ## Glossary
+
+### `<CompanyCode>`
+
+This is useful if your company has many subsidiaries or for resources that are globally scoped and need to be unique in all of Azure.
 
 ### `<DepartmentCode>`
 
@@ -47,9 +51,9 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | IT | Information Technologies |
 | EN | Engineering |
 
-### `<TeamCode>`
+### `<WorkloadCode>`
 
-3 letter code for the team that the resource is related to.  This could be a product that you're working on, or team within a department.
+3 letter code for the workload that the resource is related to.  This could be a product, application, etc that you're working on, or team within a department.
 
 |Code| Team Name |
 |--|--|
@@ -109,6 +113,16 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | PRT | Print Server |
 | SQL | SQL Server |
 | WEB | Web App/API Server |
+
+### `<AccessCode>`
+
+The level of access that a service principal, etc is [allowed](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles).
+
+|Code| Description |
+|--|--|
+| reader | Read-only permissions |
+| contributor | Read/Write permissions |
+| owner | Root permissions |
 
 ### `<Description>`
 
