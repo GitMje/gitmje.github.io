@@ -12,9 +12,9 @@ tags:
 
 ## Summary
 
-I have been using the following standards and conventions with the Azure Cloud Platform for years.  I've found it to be critial in working with teams to be opinionated in the conventions used as most teams need this level of structure but your milage may vary.
+I have been using the following standards and conventions with the Azure Cloud Platform for years.  I've found it to be critial in working with teams to be opinionated in the conventions used as most teams need this level of structure but your milage may vary.  This becomes particularly important when your team starts to implement Infrastructure-as-Code with a technology like Terraform, as all of the rules need to be well-understood.
 
-I developed them before [Microsoft created their documentation](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).  Surprisingly, we ended up with a very similar structure.  
+I developed them before [Microsoft created their documentation](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).  Surprisingly, we ended up with a very similar structure.  I keep my resource abbreviations to be the same as [Microsoft's resource abbreviations guidance](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations).
 
 The main differences is that I put the resource type at the end of my convention and they put it at the beginning.  My reasoning is that the resource type is typically less relevant than the ownership and purpose for the resource and that a convention should always go from general to specific.
 
@@ -24,29 +24,21 @@ Regarding the subscription naming, I'm a big believer in getting the subscriptio
 
 Additionally, I like to use a `-prod` and a `-nonprod` designation on subscriptions for regulated companies that need to keep different controls and budgeting on production vs non-production environments and different controls on the sensitive data stored in them.  For example, developers can access `-nonprod` freely, but `-prod` is more controlled.
 
-Below I have my recommendations.  The items in the angular brackets means that it is defined in the [Glossary](#glossary) below.
+Below I have my recommendations.  The items in the angular brackets means that it is defined in the [Glossary](#glossary) below. `?` means that the code is optional.  I also use some of these codes for Azure Tags for a convenient way to query for the information.  You may decide that you prefer to use some of these codes as tags instead of putting them into your resource names at all, in the end the choice is up to you.  I will write more on Azure Tagging in the future, but here's a [good article](https://cloudskills.io/blog/azure-policy-tagging) if you're not familiar with it.
 
 ## General Entities
 
 | Entity | Scope | Length | Casing | Valid Characters | Required Pattern | Example |
 |--|--|--|--|--|--|--|
 | **Subscription** | Subscription | 1-64 | Insensitive | All characters | `<DepartmentCode>-<TeamCode>-<ServiceLevelCode>` | `it-sap-prod` |
-| **Resource Group** | Subscription | 1-90 | Insensitive | Alphanumeric, hyphens, underscores, periods (except at end), and parentheses | `<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-<LocationCode>-<PurposeCode>-rg` | `it-sap-prod-zet-app-rg` |
+| **Resource Group** | Subscription | 1-90 | Insensitive | Alphanumeric, hyphens, underscores, periods (except at end), and parentheses | `<DepartmentCode>-?<TeamCode>-?<PurposeCode>-<ServiceLevelCode>-<LocationCode>--rg` | `it-sap-env-prod-zet-rg` |
 | **Tag** | Associated Entity | 512 (named), 256 (value) | Insensitive | Alphanumeric including Unicode characters; special characters except <, >, %, &, \, ?, /. See limitations here . Maximum of [50](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json#limitations). | `"key" : "value"` | `"department" : "DevOps"` |
-| **Key Vault** | Global | 3-24 | Insensitive | Alphanumeric and hyphens | `<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-vlt` | `it-sap-dev-vlt` |
-| **Service Principal** | Scope-dependent | 1-120 | Insensitive | Alphanumeric and hyphens (not < > ; & %) | `<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-<Description>-sp` | `it-sap-dev-zet-reader-sp` |
-
-## Azure DevOps (ADO) Entities
-
-| Entity | Scope | Length | Casing | Valid Characters | Required Pattern  | Example |
-|--|--|--|--|--|--|--|
-| **Variable Group in ADO** | Global | 1-128 | Insensitive | Alphanumeric, underscores, hyphens, periods (except at end), parentheses | `<DepartmentCode>-<TeamCode>-<ServiceLevelCode>-?<PurposeCode>-Values`  | `IT-sap-Dev-Values` |
-| **Variable Group linked with Azure Key Vault** | Global | 1-128 | Insensitive | Alphanumeric, underscores, hyphens, periods (except at end), parentheses | `<DepartmentCode>-<TeamCode>-<ServiceLevelCode>-?<PurposeCode>-vlt` | `IT-SAP-Dev-ADO-vlt` |
-| **Variable** | Variable Group | 1-128 | Insensitive | Any URL characters | `PascalCase` | `BuildConfiguration` |
+| **Key Vault** | Global | 3-24 | Insensitive | Alphanumeric and hyphens | `?<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-vlt` | `it-sap-dev-vlt` |
+| **Service Principal** | Scope-dependent | 1-120 | Insensitive | Alphanumeric and hyphens (not < > ; & %) | `?<DepartmentCode>-?<TeamCode>-<ServiceLevelCode>-<Description>-sp` | `it-sap-dev-zet-reader-sp` |
 
 ## Glossary
 
-### DepartmentCode
+### `<DepartmentCode>`
 
 2 characters to represent the associated Department. (see examples below)
 | Abbreviation | Description |
@@ -55,7 +47,7 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | IT | Information Technologies |
 | EN | Engineering |
 
-### TeamCode
+### `<TeamCode>`
 
 3 letter code for the team that the resource is related to.  This could be a product that you're working on, or team within a department.
 
@@ -66,7 +58,7 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | **dot** | The DevOps team |
 | **spm** | The Stay Puft Marshmallow development team |
 
-### LocationCode
+### `<LocationCode>`
 
 3 characters to represent the location of the VM.  This can be a cloud region or it can be a physical datacenter.  I try to use airport appreviations for the city if one exists that defines the city.
 
@@ -80,9 +72,9 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | WET | AWS US East  |
 | WWT | AWS US West  |
 
-### ServiceLevelCode
+### `<ServiceLevelCode>`
 
-1 character for the lifecycle stage of development.
+1 character for the lifecycle stage of development.  In the past, I called this field `<EnvironmentCode>` as I thought of these resources as environments.  I quickly realized that terming this code as a service level makes more sense.  The usefulness of this code is mostly around lifecycle and required support of its environments and resources.
 
 |Code | Abbreviation | Description |
 |--|--|--|
@@ -96,26 +88,30 @@ Below I have my recommendations.  The items in the angular brackets means that i
 | N | np |**N**on-Production |
 | O | demo |Dem**o** |
 | P | prod |**P**roduction |
-| R | dr |Disaster **R**ecovery |
+| R | pr |Pull **R**equest environment |
+| *R`*`* | dr |Disaster **R**ecovery |
 | S | sta |**S**taging/Stable|
 | T | test |**T**est/QA|
 | U | uat | **U**ser Acceptance Testing |
 | X | sbox | Sandbo**x** |
 
-### PurposeCode
+### `<PurposeCode>`
 
-3 character code for the role/purpose of the VM.
+3 character code for the role/purpose of the resource.
 
 |Code| Description |
 |--|--|
 | APP | Application server (Windows Services, Console Applications) |
 | BLD | On-Premise Build Server |
+| ENV | A resource group containing the entire environment (e.g., web servers, dbs, etc.) |
 | EXC | Exchange Server |
 | FIL | File Server |
 | PRT | Print Server |
 | SQL | SQL Server |
 | WEB | Web App/API Server |
 
-### Description
+### `<Description>`
 
 Free form field for any notes or descriptions about the resources.
+
+* `*` Note: if you are considering using a [blue/green deployment pattern](https://martinfowler.com/bliki/BlueGreenDeployment.html), then all servers, include Disaster Recovery servers will be Production (prod) servers, they will just be switched from one set of servers to the others, or generated on demand.
